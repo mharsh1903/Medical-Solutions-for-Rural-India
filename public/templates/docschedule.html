@@ -1,0 +1,14 @@
+<div>
+    <button ng-click="appointment.listPatient()">try</button>
+    
+    <div ng-repeat="y in appointment.data">
+    {{y.name}}<br>
+    </div>
+    <div class="row" ng-repeat="j in appointment.number" >
+                <div class="col-xs-4 col-md-3 col-sm-2 col-lg-1" ng-class= "{'col-lg-offset-4':i==1}"ng-repeat="i in appointment.number" style="padding-left: 0px;  padding-right: 0px;">
+                    {{appointment.data[i+3*(j-1)-1].name}}<img src="img/logo.jpg" class="img-responsive" >
+                      
+                      
+                </div>
+        </div>
+</div>

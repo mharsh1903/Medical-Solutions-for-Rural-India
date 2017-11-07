@@ -14,14 +14,36 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <link href="css/simple-sidebar.css" rel="stylesheet">
+      
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon/favicon.ico" />
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
-    <script src="js/clinic.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
 
+    <script src="js/clinic.js"></script>
+     <script src="js/firebase.js"></script>
+
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCXgwpyqDiC_xvZ6QaYAcZOMFQ8hqPpiq4",
+    authDomain: "medicalsolutionsforrural-india.firebaseapp.com",
+    databaseURL: "https://medicalsolutionsforrural-india.firebaseio.com",
+    projectId: "medicalsolutionsforrural-india",
+    storageBucket: "medicalsolutionsforrural-india.appspot.com",
+    messagingSenderId: "117537455698"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/angularfire.js"></script>       
     
 </head>
 
 <body ng-app="clinic">
+<div ng-controller="appointmentCtrl as appointment">
 
     <div id="wrapper">
 
@@ -42,13 +64,13 @@
                     <a href="#!/inventory">Inventory</a>
                 </li>
                 <li>
-                    <a href="#">Send Distress Signal</a>
+                    <a href="#!/distress">Send Distress Signal</a>
                 </li>
                 <li>
-                    <a href="#">Patient History</a>
+                    <a href="#!/pathistory">Patient History</a>
                 </li>
                 <li>
-                    <a href="#">Patient Appointments</a>
+                    <a href="#!/patappoint">Patient Appointments</a>
                 </li>
                 
             </ul>
@@ -57,7 +79,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 
-                <h1>Clinic Dashboard</h1>
+                <h1>Clinic Dashboard&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{appointment.clinic_name}}</h1>&nbsp
                
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> </a>
             </div>
@@ -80,7 +102,7 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-
+</div>
 </body>
 
 </html>

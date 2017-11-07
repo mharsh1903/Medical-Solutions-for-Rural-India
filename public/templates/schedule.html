@@ -1,0 +1,9 @@
+<input type="date" ng-model="doc.date">
+<button ng-click="doc.bookdoc(doc.date)">test</button> 
+<div ng-repeat="x in doc.array">
+    <ul class="list-group">
+        <li class="list-group-item-info">
+    {{x.patient_name}} {{x.age}} {{x.gender}}
+        </li>
+    </ul>
+</div>

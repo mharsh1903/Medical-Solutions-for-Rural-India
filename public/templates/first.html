@@ -1,0 +1,33 @@
+<div ng-controller="mainctrl as main">
+<div class="row">
+    <div class="col-lg-offset-2 col-lg-4">
+        <br>
+        <button class="btn btn-success btn-lg"ng-click="main.registerClinic()">FIND DOCTOR</button>
+    </div>
+    <div class="col-lg-4"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">login</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Clinic Login</h4>
+        </div>
+        <div class="modal-body">
+          <p><input type="email" placeholder="email" ng-model="main.email"></p>
+          <p><input type="password" placeholder="password"ng-model="main.password"></p>
+          <p><button type="button" class="btn btn-success"ng-click=main.ClinicLogin(main.email,main.password)>Login</button></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+</div>
+</div>

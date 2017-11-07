@@ -1,0 +1,11 @@
+<div>
+    
+    <div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control input-lg" placeholder="medicine Name" ng-model="appointment.medname">
+				</div>
+    
+    <button ng-click="appointment.addmedicine(appointment.medname)">List Medicines</button>
+    <div ng-repeat="x in appointment.meddata">
+        {{x.name}} {{x.quantity}} <button >+</button><button ng-class="btn-btn-danger"ng-click=appointment.deductmedicine(x.name)>-</button>
+    </div>
+</div>
